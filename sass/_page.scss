@@ -1,0 +1,30 @@
+.site-main {
+    .type-post {
+        color: #ffffff;
+        .entry-content {
+            p {
+                font-weight: 400;
+            }
+        }
+        .entry-meta {
+            display: flex;
+            justify-content: space-evenly;
+            .entry-title {
+                margin: auto;
+                font-weight: 400;
+
+                // h2 {
+                //     font-weight: 400;
+
+                // }
+            }
+            .source {
+                a {
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: #00cc00;
+                }
+            }
+        }
+    }
+}

@@ -58,3 +58,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "content";
 @import "media";
 @import "page-templates";
+@import "header";
+@import "footer";
+@import "page";
+
+html {
+	margin: 2rem;
+}

@@ -593,3 +593,37 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+.home {
+  font-family: 'Exo', sans-serif;
+  background: #222222; }
+
+.main-navigation {
+  font-family: 'Exo', sans-serif; }
+  .main-navigation ul {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
+    .main-navigation ul a {
+      color: #00cc00; }
+
+.site-main .type-post {
+  color: #ffffff; }
+  .site-main .type-post .entry-content p {
+    font-weight: 400; }
+  .site-main .type-post .entry-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly; }
+    .site-main .type-post .entry-meta .entry-title {
+      margin: auto;
+      font-weight: 400; }
+    .site-main .type-post .entry-meta .source a {
+      font-weight: 400;
+      text-decoration: none;
+      color: #00cc00; }
+
+html {
+  margin: 2rem; }
