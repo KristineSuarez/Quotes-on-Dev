@@ -26,15 +26,11 @@
 				<div class="logo">
 					<h1 class="site-title screen-reader-text">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<a href=""> <img src="<?php echo get_template_directory_uri(); ?>/logo/qod-logo.svg" alt="Quotes on Dev"> </a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"> <img src="<?php echo get_template_directory_uri(); ?>/logo/qod-logo.svg" alt="Quotes on Dev"> </a>
 				</div>
 					<!-- <p class="site-description"><php bloginfo( 'description' ); ?></p> -->
 				</div><!-- .site-branding -->
 
-				<!-- <nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><php echo esc_html( 'Primary Menu' ); ?></button>
-					?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav>#site-navigation -->
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

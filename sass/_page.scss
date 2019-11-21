@@ -1,3 +1,9 @@
+.home {
+    font-family: $font__main;
+    background: $color__background-body;
+
+}
+
 .site-main {
     .type-post {
         color: #ffffff;
@@ -7,24 +13,29 @@
             }
         }
         .entry-meta {
-            display: flex;
-            justify-content: space-evenly;
             .entry-title {
-                margin: auto;
+                display: inline;
+                font-size: 1.25rem;
                 font-weight: 400;
-
-                // h2 {
-                //     font-weight: 400;
-
-                // }
+                margin-bottom: 0;
             }
+            
             .source {
                 a {
                     font-weight: 400;
                     text-decoration: none;
-                    color: #00cc00;
+                    color: $color__text-main;
                 }
             }
         }
+    }
+
+    #new-quote-button {
+        background: $color__background-body;
+        border: 2px solid $color__text-main;
+        color: $color__text-main;
+        font-weight: 400;
+        font-size: 1rem;
+        padding: 15px 30px;
     }
 }
