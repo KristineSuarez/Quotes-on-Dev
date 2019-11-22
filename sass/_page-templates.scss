@@ -3,5 +3,33 @@
 --------------------------------------------------------------*/
 
 /* All Archives Page */
+.content-area{
+    .site-main{
+        .browse-archives{
+            .clearfix{
+                h2{
+                    color: #ffffff;
+                }
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-left: 0;
+                    padding-left: 0;
+                    list-style: none;
+                    justify-content: space-between;
+                    text-align: left;
+                    line-height: 2.5rem;
+                    margin: 0 12px;
+                    li{
+                        a{
+                            text-decoration: none;
+                            color:$color__text-main;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 /* Submit a Quote Page */

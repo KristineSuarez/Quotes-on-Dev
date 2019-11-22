@@ -22,7 +22,7 @@ get_header(); ?>
 							Quotes on Dev is a project site for the RED Academy Web Developer Professional program. It’s used to experiment with Ajax, WP API, jQuery, and other cool things. 🙂
 						</p>
 						<p class="about-quotes">This site is heavily inspired by Chris Coyler's
-							<a href="<?php echo esc_url( 'http://www.redacademy.com/' ); ?>"><?php printf( esc_html('Quotes on Design') ); ?></a>
+							<a href="<?php echo esc_url( 'https://quotesondesign.com/' ); ?>"><?php printf( esc_html('Quotes on Design') ); ?></a>
 						</p>
 
 					</div><!-- .entry-content -->

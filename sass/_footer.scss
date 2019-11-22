@@ -2,17 +2,17 @@
     font-family: 'Exo', sans-serif;
         ul {
             display: inline-flex;
-            // justify-content: space-between;
-            // color: #00cc00;
             a {
                 color: $color__text-main;
-                // padding: 20px;
                 margin: 20px 20px 10px 0;
             }
         }
 }
 
 .site-info {
+    .main-navigation {
+        padding-top: 20px;
+    }
     p{
         color: #ffffff;
         margin: 40px auto 10px 0;
@@ -21,4 +21,14 @@
         text-decoration: none;
         color: $color__text-main;
     }
+}
+
+@include tablet
+.main-navigation {
+    width: auto;
+}
+
+.site-info {
+    display: flex;
+
 }

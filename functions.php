@@ -62,18 +62,23 @@ function qod_scripts() {
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 
-	//here is where you loacalized script code will go, reference this script qod-script
-	wp_localize_script( 'qod-script', 'qod_vars', array(
-		'rest_url' => esc_url_raw( rest_url() ),
-		'nonce' => wp_create_nonce( 'wp_rest' ),
-		'success' => 'Thanks, your submission was received!',
-		'failure' => 'Your submission could not be processed.',
-	  ) );
 
+	//here is where you loacalized script code will go, reference this script qod-script
+	$script_url = get_template_directory_uri() . '/build/js/qod.min.js';
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('rest_comments', $script_url, array('jquery'), false, true);
+	wp_localize_script('rest_comments', 'qod_vars', array(
+		'rest_url' => rest_url(),
+		'wpapi_nonce' => wp_create_nonce('wp_rest'),
+		'post_id' => get_the_ID(),
+		'user_id' => get_current_user_id(),
+	));
+}
+	add_action('wp_enqueue_scripts', 'qod_scripts');
 	//look at the WP REST API slides or the wp-2017-rest theme in functions.php for more info
 
-  }
-  add_action( 'wp_enqueue_scripts', 'qod_scripts' );
+  
+//   add_action( 'wp_enqueue_scripts', 'qod_scripts' );
 	//look at the WP REST API slides or the wp-2017-rest theme in functions.php for more info
 
 /**

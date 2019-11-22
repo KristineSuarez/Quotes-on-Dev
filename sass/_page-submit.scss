@@ -1,0 +1,30 @@
+.entry-title {
+    font-weight: 400;
+}
+
+.quote-submission-wrapper { 
+    display: flex;
+    flex-direction: column;
+
+    .qs-form-submit {
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: column wrap;
+
+        .quote-box {
+            background: $color__background-body;
+            border: 2px solid $color__text-main;
+        }
+    }
+        .submit-form {
+            background: $color__background-body;
+            border: 2px solid $color__text-main;
+            color: $color__text-main;
+            font-weight: 400;
+            font-size: 1rem;
+            padding: 15px 30px;
+        }
+}
+
+        

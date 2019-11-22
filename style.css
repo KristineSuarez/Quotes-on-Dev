@@ -589,6 +589,28 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* All Archives Page */
+.content-area .site-main .browse-archives .clearfix h2 {
+  color: #ffffff; }
+
+.content-area .site-main .browse-archives .clearfix ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+  line-height: 2.5rem;
+  margin: 0 12px; }
+  .content-area .site-main .browse-archives .clearfix ul li a {
+    text-decoration: none;
+    color: #00cc00; }
+
 /* Submit a Quote Page */
 body {
   font-family: "Exo", sans-serif;
@@ -604,6 +626,9 @@ body {
       color: #00cc00;
       margin: 20px 20px 10px 0; }
 
+.site-info .main-navigation {
+  padding-top: 20px; }
+
 .site-info p {
   color: #ffffff;
   margin: 40px auto 10px 0; }
@@ -611,6 +636,14 @@ body {
 .site-info a {
   text-decoration: none;
   color: #00cc00; }
+
+.main-navigation {
+  width: auto; }
+
+.site-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .home {
   font-family: "Exo", sans-serif;
@@ -638,11 +671,49 @@ body {
   font-size: 1rem;
   padding: 15px 30px; }
 
-.site-main .entry-header .entry-title {
+.content-area .site-main .entry-header .entry-title {
   color: #ffffff; }
 
-.site-main .entry-header .entry-content .about-info p {
+.content-area .site-main .entry-content p {
   color: #ffffff; }
+
+.content-area .site-main .entry-content a {
+  text-decoration: none;
+  color: #00cc00; }
+
+.entry-title {
+  font-weight: 400; }
+
+.quote-submission-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .quote-submission-wrapper .qs-form-submit {
+    padding: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap; }
+    .quote-submission-wrapper .qs-form-submit .quote-box {
+      background: #222222;
+      border: 2px solid #00cc00; }
+  .quote-submission-wrapper .submit-form {
+    background: #222222;
+    border: 2px solid #00cc00;
+    color: #00cc00;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 15px 30px; }
 
 html {
   margin: 2rem; }
