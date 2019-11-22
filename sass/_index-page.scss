@@ -3,17 +3,6 @@
     background: $color__background-body;
 
 }
-// .site-content {
-//     ::before {
-//         content: "\f10d";
-//         font-family: "FontAwesome";
-//         font-weight: 700;
-//     }
-//     ::after {
-//         content: "\f10e";
-//         font-family: "FontAwesome";
-//         font-weight: 700;
-//     }
     .site-main {
         .type-post {
             color: #ffffff;
@@ -40,7 +29,6 @@
             }
         }
     }
-// }
 
     #new-quote-button {
         background: $color__background-body;
@@ -50,16 +38,44 @@
         font-size: 1rem;
         padding: 15px 30px;
     }
-@include desktop
-.entry-content {
-    ::before {
-        content: "\f10d";
-        font-family: "Font Awesome 5 free";
-        font-weight: 700;
+
+@include desktop {
+    .site-main {
+        display: flex;
+        flex-direction: column;
+        .type-post {
+        position: relative;
+        display: flex;
+        flex-flow: column wrap;
+        padding-right: 10rem;
+        padding-left: 10rem;
+        #new-quote-button {
+            margin-left: 25rem;
+            margin-right: 25rem;
+        }
+            &::before {
+            content: "\f10d";
+            font-family: "Font Awesome 5 free";
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 7rem;
+            color: $color__text-main;
+        }
+        &::after {
+            content: "\f10e";
+            font-family: "Font Awesome 5 free";
+            font-weight: 700;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 7rem;
+            color: $color__text-main;
+        }
     }
-    ::after {
-        content: "\f10e";
-        font-family: "Font Awesome 5 free";
-        font-weight: 700;
+        
     }
 }

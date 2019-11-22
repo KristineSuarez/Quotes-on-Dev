@@ -23,12 +23,12 @@
     }
 }
 
-@include tablet
-.main-navigation {
-    width: auto;
+@include tablet {
+    .site-info {
+        display: flex;
+        .main-navigation {
+            width: max-content;
+        }
+    }
 }
 
-.site-info {
-    display: flex;
-
-}

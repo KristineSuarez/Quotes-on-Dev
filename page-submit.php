@@ -25,7 +25,7 @@ get_header(); ?>
                      </div>
                      <div class="qs-form-submit">
                         <label for="quote-content">Quote</label>
-                        <textarea class="quote-box" rows="3" cols="20" name="quote_content" id="quote-content" required aria-required="true"></textarea>
+                        <textarea class="quote-area" rows="3" cols="20" name="quote_content" id="quote-content" required aria-required="true"></textarea>
                      </div>
                      <div class="qs-form-submit">
                         <label for="quote-source">Where did you find this quote? (e.g. book name)</label>

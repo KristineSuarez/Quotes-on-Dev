@@ -15,6 +15,12 @@
         .quote-box {
             background: $color__background-body;
             border: 2px solid $color__text-main;
+            margin-right: 10rem;
+        }
+
+        .quote-area {
+            background: $color__background-body;
+            border: 2px solid $color__text-main;
         }
     }
         .submit-form {
@@ -24,6 +30,7 @@
             font-weight: 400;
             font-size: 1rem;
             padding: 15px 30px;
+            margin-top: 1rem;
         }
 }
 

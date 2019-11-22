@@ -3,3 +3,13 @@ body {
     background:$color__background-body;
 
 }
+
+@include desktop {
+    .site-header {
+        .site-branding {
+            .logo {
+                text-align: center;
+            }
+        }
+    }
+}
