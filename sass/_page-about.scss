@@ -1,19 +1,19 @@
-.content-area {
-    .site-main {
-        .entry-header {
-            .entry-title {
-                color: #ffffff;
-            } 
-            
-        }
-        .entry-content {
-            p {
-                color: #ffffff
+    .content-area {
+        .site-main {
+            .entry-header {
+                .entry-title {
+                    color: #ffffff;
+                } 
+                
             }
-            a {
-                text-decoration: none;
-                color:$color__text-main;
+            .entry-content {
+                p {
+                    color: #ffffff
+                }
+                a {
+                    text-decoration: none;
+                    color:$color__text-main;
+                }
             }
         }
     }
-}

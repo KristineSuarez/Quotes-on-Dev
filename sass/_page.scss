@@ -3,32 +3,44 @@
     background: $color__background-body;
 
 }
-
-.site-main {
-    .type-post {
-        color: #ffffff;
-        .entry-content {
-            p {
-                font-weight: 400;
-            }
-        }
-        .entry-meta {
-            .entry-title {
-                display: inline;
-                font-size: 1.25rem;
-                font-weight: 400;
-                margin-bottom: 0;
-            }
-            
-            .source {
-                a {
+// .site-content {
+//     ::before {
+//         content: "\f10d";
+//         font-family: "FontAwesome";
+//         font-weight: 700;
+//     }
+//     ::after {
+//         content: "\f10e";
+//         font-family: "FontAwesome";
+//         font-weight: 700;
+//     }
+    .site-main {
+        .type-post {
+            color: #ffffff;
+            .entry-content {
+                p {
                     font-weight: 400;
-                    text-decoration: none;
-                    color: $color__text-main;
+                }
+            }
+            .entry-meta {
+                .entry-title {
+                    display: inline;
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                }
+                
+                .source {
+                    a {
+                        font-weight: 400;
+                        text-decoration: none;
+                        color: $color__text-main;
+                    }
                 }
             }
         }
     }
+// }
 
     #new-quote-button {
         background: $color__background-body;
@@ -37,5 +49,17 @@
         font-weight: 400;
         font-size: 1rem;
         padding: 15px 30px;
+    }
+@include desktop
+.entry-content {
+    ::before {
+        content: "\f10d";
+        font-family: "Font Awesome 5 free";
+        font-weight: 700;
+    }
+    ::after {
+        content: "\f10e";
+        font-family: "Font Awesome 5 free";
+        font-weight: 700;
     }
 }

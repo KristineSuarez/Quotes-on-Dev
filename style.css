@@ -663,13 +663,23 @@ body {
     text-decoration: none;
     color: #00cc00; }
 
-.site-main #new-quote-button {
+#new-quote-button {
   background: #222222;
   border: 2px solid #00cc00;
   color: #00cc00;
   font-weight: 400;
   font-size: 1rem;
   padding: 15px 30px; }
+
+.entry-content ::before {
+  content: "\f10d";
+  font-family: "Font Awesome 5 free";
+  font-weight: 700; }
+
+.entry-content ::after {
+  content: "\f10e";
+  font-family: "Font Awesome 5 free";
+  font-weight: 700; }
 
 .content-area .site-main .entry-header .entry-title {
   color: #ffffff; }
