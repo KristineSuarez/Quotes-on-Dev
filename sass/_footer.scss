@@ -32,3 +32,13 @@
     }
 }
 
+@include desktop {
+    .site-info{
+        justify-content: flex-end;
+        p {
+            margin: 0;
+            margin-top: 2.5rem;
+        }
+    }
+}
+

@@ -25,8 +25,6 @@
         let postObject = data[0];
         console.log(postObject);
 
-        // const postSource = data[0];
-        // const postUrl = data[0];
         $('.entry-content').html(postObject.content.rendered);
         $('.entry-title').html(postObject.title.rendered);
 
