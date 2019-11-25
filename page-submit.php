@@ -49,6 +49,8 @@ get_header(); ?>
                <p><?php echo sprintf( '<a href="%1s">%2s</a>', esc_url( wp_login_url() ), 'Click here to login.' ); ?></p>
 
             <?php endif; ?>
+
+
          </section>
 
 		</main><!-- #main -->
