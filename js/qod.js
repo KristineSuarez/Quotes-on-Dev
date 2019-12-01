@@ -1,8 +1,5 @@
 (function($){
 
-
-
-
         let lastPage = '';
 
     $('#new-quote-button').on('click', function(event){
@@ -12,15 +9,13 @@
     
    
     //1: get request to grab random post and append to the DOM
-
-    //add a click event for the "Show Me Another" btn and then run the AJAX code below
     $.ajax({
         method: "GET",
-        url: qod_vars.rest_url + "/wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1"
+        url: qod_vars.rest_url + '/wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
 
     }).done(function(data){
 
-        $(".source").empty();
+        $('.source').empty();
 
         let postObject = data[0];
         console.log(postObject);
@@ -30,17 +25,12 @@
 
         function addsource() {
             const s = data[0]._qod_quote_source;
-            if (s !== "") {
+            if (s !== '') {
                 $('.source').html(`<a href="${postObject._qod_quote_source_url}">${postObject._qod_quote_source}</a>`);
             } else {
             }
         }
         addsource();
-
-
-
-        // const post = data [0];
-        // console.log(post);
 
         history.pushState(null, null, qod_vars.home_url + '/' + postObject.slug); //or (null, null, data[0].slug)
        // 1st value is an object which manages state
@@ -50,27 +40,42 @@
     }).fail(function(error){
         //TODO append a message to the DOM for user feedback
         console.log("an error occured", error);
-    }); //ajax 
+    });  
+        $(window).on('popstate', function(){
+            window.location.replace(lastPage); 
+
+        })
+    })
+
 
 });
 
-
     //update the page when we click the forward and back buttons
     //2: post a new quote using the post method
-    
-    //using a for m to submit a quote so a .submit event
-        $(window).on('popstate', function(){
-            //update the url
-            window.location.replace(lastPage); 
+    (function($) {
+        $('submit-form').on('click', function(event) {
+          event.preventDefault();
+          console.log('submit');
+          $.ajax({
+            method: 'post',
+            url: window.qod_vars.rest_url + 'wp/v2/posts/',
+            data: {
+              title: $('#quote-author').val(),
+              content: $('#quote-content').val(),
+              _qod_quote_source: $('#quote-source').val(),
+              _qod_quote_source_url: $('#quote-source-url').val()
+            },
+            beforeSend: function(xhr) {
+              xhr.setRequestHeader('X-WP-Nonce', window.qod_vars.wpapi_nonce);
+            }
+          })
+            .fail(function() {
+              alert('fail');
+            })
+            .done(function(response) {
+              alert('Success! Comments are closed for this post.');
+            })
 
         });
-
 })(jQuery);
-
-
-//IIFE Immediately Invoked Function Expression
-// Invoked also means calling a function or just running a function
-
-
-// use for 	wp_localize_script( 'qod-script', 'qod_vars' on functions.php ->console.log( api_vars.success );
 
